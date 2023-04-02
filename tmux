@@ -1,0 +1,1 @@
+/home/khushangsingla/.config/tmux/
