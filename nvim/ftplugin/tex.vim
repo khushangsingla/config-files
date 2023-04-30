@@ -6,4 +6,4 @@ nnoremap <C-\> ^I<DEL><DEL><ESC>
 
 " Bold using C-B
 inoremap <C-B> \textbf{
-
+vnoremap <C-B> c\textbf{<ESC>pa}<ESC>
