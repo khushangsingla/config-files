@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[core]
+	sshCommand = "ssh -i ~/.ssh/id_ed25519"
+[user]
+	name = Khushang Singla
+	email = khushangsingla@gmail.com
+# Please adapt and uncomment the following lines:
+#	name = Khushang Singla
+#	email = khushangsingla@gmail.com
+[init]
+	defaultBranch = main
+[diff]
+	tool = nvim
+[difftool "nvim"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+[alias]
+	diff = difftool
+[pull]
+	rebase = false

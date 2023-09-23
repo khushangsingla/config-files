@@ -1,0 +1,77 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+	interval = 1
+	# separator="\t | \t"
+		colors = true
+		color_good="#FFFFFF"
+		color_degraded="#ffd75f"
+		color_bad="#d75f5f"
+}
+
+order += "wireless wlp2s0"
+order += "path_exists VPN"
+order += "memory"
+order += "cpu_usage"
+order += "volume master"
+order += "battery 0"
+order += "tztime local"
+
+path_exists VPN {
+		# path exists when a VPN tunnel launched by nmcli/nm-applet is active
+		path = "/proc/sys/net/ipv4/conf/tun0"
+}
+					 
+wireless wlp2s0{
+        format_up = "\tW: (%quality at %essid) %ip\t"
+        format_down = "\tW: down\t"
+}
+
+tztime local {
+	format = "\t%Y-%m-%d\t%I:%M\t"
+}
+
+cpu_usage {
+	format = "\tCPU:%usage\t"
+}
+
+load {
+	format = "\t%5min 5min\t"
+}
+
+volume master {
+	format = "\t♪ : %volume\t"
+		format_muted = "\t♪ : m(%volume)\t"
+		device = "default"
+		mixer = "Master"
+		mixer_idx = 0
+}
+
+volume mic {
+	format = "\t%devicename: %volume\t"
+		format_muted = "\t%devicename: m(%volume)\t"
+		device = "default"
+		mixer = "Capture"
+}
+memory {
+        format = "\tMEMU: %used\t"
+        threshold_degraded = "10%"
+        format_degraded = "\tMEMF: %free\t"
+}
+
+battery 0 {
+        format = "\t%status\t%percentage \t"
+        format_down = "No battery"
+        status_chr = "⚡"
+        status_bat = "🔋 BAT"
+        status_unk = "? UNK"
+        status_full = "☻ FULL"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 30
+}
