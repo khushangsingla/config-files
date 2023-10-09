@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [core]
-	sshCommand = "ssh -i ~/.ssh/id_ed25519"
+	sshCommand = "ssh -i ~/.ssh/id_rsa"
 [user]
 	name = Khushang Singla
 	email = khushangsingla@gmail.com
