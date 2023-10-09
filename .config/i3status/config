@@ -29,7 +29,7 @@ path_exists VPN {
 }
 					 
 wireless wlp2s0{
-        format_up = "\tW: (%quality at %essid) %ip\t"
+        format_up = "\tW: %bitrate\t(%quality at %essid) %ip\t"
         format_down = "\tW: down\t"
 }
 
