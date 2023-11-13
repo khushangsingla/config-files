@@ -34,7 +34,7 @@ wireless wlp2s0{
 }
 
 tztime local {
-	format = "\t%Y-%m-%d\t%I:%M\t"
+	format = "\t%Y-%m-%d\t\t\t%I:%M\t"
 }
 
 cpu_usage {

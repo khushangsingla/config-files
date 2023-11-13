@@ -60,6 +60,10 @@ map <leader>gt :tabn
 inoremap jj <C-n>
 inoremap kk <C-p>
 
+" ESC using jk or kj
+inoremap jk <ESC>
+inoremap kj <ESC>
+
 " Normal Functioning of Y
 nnoremap Y Vy
 
@@ -120,3 +124,12 @@ if exists("+showtabline")
     set showtabline=1
     highlight link TabNum Special
 endif
+
+
+" Copilot
+call plug#begin()
+Plug 'github/copilot.vim', { 'do': ':UpdateRemotePlugins' }
+call plug#end()
+
+nnoremap <C-k> <C-y>
+nnoremap <C-j> <C-e>
