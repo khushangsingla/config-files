@@ -4,6 +4,8 @@ echo $status
 if [ $((status)) -eq $((1)) ]
 then
 	xinput disable $dev
+	notify-send -t 2000 Touchpad off
 else
 	xinput enable $dev
+	notify-send -t 2000 Touchpad on
 fi
