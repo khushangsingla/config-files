@@ -194,9 +194,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
-exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/macaw-poly2.jpg
+# exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/macaw-poly2.jpg
 
 # mouse doesn't change focus
 focus_follows_mouse no
