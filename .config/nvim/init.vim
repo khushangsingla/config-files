@@ -133,3 +133,4 @@ call plug#end()
 
 nnoremap <C-k> <C-y>
 nnoremap <C-j> <C-e>
+set mouse=
