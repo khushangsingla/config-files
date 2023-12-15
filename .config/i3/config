@@ -147,7 +147,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # Browser
-bindsym $mod+b exec google-chrome
+bindsym $mod+b exec google-chrome-stable
 bindsym $mod+m exec --no-startup-id "/home/khushangsingla/.local/bin/ytmusic"
 assign [class="Google-chrome"] $ws2
 assign [class="YouTube Music"] $ws10
@@ -202,10 +202,10 @@ client.focused          #2e3436 #2e3436 #ffffff #2e3436   #2e3436
 focus_follows_mouse no
 
 # Enabling Special Keys ()
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5%+ unmute;notify-send -t 100 sound+"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5%- unmute;notify-send -t 100 sound-"
-bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
-bindsym XF86AudioMicMute exec "amixer -q sset Capture,0 toggle"
+bindsym XF86AudioRaiseVolume exec "amixer -c 1 -q sset Master,0 5%+ unmute;notify-send -t 100 sound+"
+bindsym XF86AudioLowerVolume exec "amixer -c 1 -q sset Master,0 5%- unmute;notify-send -t 100 sound-"
+bindsym XF86AudioMute exec "amixer -c 1 -q sset Master,0 toggle"
+bindsym XF86AudioMicMute exec "amixer -c 1 -q sset Capture,0 toggle"
 bindsym XF86TouchpadToggle exec $scriptpath/toggle_touchpad.sh
 bindsym XF86Calculator exec "mate-calc"
 bindsym XF86MonBrightnessUp exec "brightnessctl set +5;notify-send -t 100 brightness+"
