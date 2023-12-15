@@ -218,7 +218,7 @@ bindsym XF86MonBrightnessDown exec "brightnessctl set 5-;notify-send -t 100 brig
 # 		status_command i3status
 # }
 bar {
-    status_command    i3status
+    status_command    /home/khushangsingla/.config/i3status/gen.sh
 	mode              hide
     workspace_buttons yes
     tray_output       none
