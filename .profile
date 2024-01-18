@@ -24,6 +24,6 @@ fi
 
 PATH=$PATH:/home/khushangsingla/.local/bin
 
-if [ -z "$DISPLAY" ] && [ $XDG_VTNR = 1 ]; then
+if [ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 && -z "$SSH_CONNECTION"]; then
 	exec startx
 fi
