@@ -22,7 +22,9 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 
-PATH=$PATH:/home/khushangsingla/.local/bin
+if [ -d "$HOME/.local/bin" ] ; then
+	PATH="$HOME/.local/bin:$PATH"
+fi
 
 if [ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 && -z "$SSH_CONNECTION"]; then
 	exec startx
