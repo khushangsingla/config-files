@@ -112,11 +112,11 @@ bindsym $mod+Ctrl+l exec i3lock -uc 000000
 set $ws1 "1.terms"
 set $ws2 "2.chromes"
 set $ws3 "3.vbox"
-set $ws4 "4"
-set $ws5 "5"
+set $ws4 "4.pdf"
+set $ws5 "5.teams"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
+set $ws8 "8.qemu"
 set $ws9 "9.decompile"
 set $ws10 "0.music"
 
@@ -153,6 +153,9 @@ assign [class="Google-chrome"] $ws2
 assign [class="YouTube Music"] $ws10
 assign [class="Binary Ninja"] $ws9
 assign [class="VirtualBox"] $ws3
+assign [class="Qemu-system-x86_64"] $ws8
+assign [class="Atril"] $ws4
+assign [class="teams-for-linux"] $ws5
 # assign [class="i3-frame"] $ws3
 # for_window [class="VirtualBox Manager"] floating enable
 # for_window [class="VirtualBox"] floating enable
