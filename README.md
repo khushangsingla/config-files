@@ -1,11 +1,11 @@
 Installing
 ==========
 
-Clone this repo to a bare repo called `.config.git`. This contains all
+Clone this repo to a bare repo called `.config/dotfiles.git`. This contains all
 the files that Git needs for its internal operation. By convention, the
 bare repo ends with a `.git` extension.
 
-    git clone --bare git@github.com:sohyongsheng/dotfiles.git ${HOME}/.config/dotfiles.git
+    git clone --bare git@github.com:khushangsingla/dotfiles.git ${HOME}/.config/dotfiles.git
 
 Add this alias `config-files-git`. This is like the normal `git` command, but
 specifies the Git directory (internal files that Git uses), and the
@@ -13,7 +13,7 @@ working tree (actual files that we work on). We can use this alias `config-files
 in replacement of `git`, e.g. `config-files-git status`, `config-files-git branch`, `config-files-git push`,
 etc.
 
-    alias config-files-git='git --git-dir ${HOME}/.config/dotfiles.git/ --work-tree ${HOME}'
+    alias config-files-git='git --git-dir $HOME/.config/dotfiles.git/ --work-tree ${HOME}'
 
 Don't show untracked files when doing `config-files-git status`. Otherwise, Git would
 recursively list all files from the home directory, which would either
@@ -21,15 +21,9 @@ lag our computer or  flood the entire screen.
 
     config-files-git config status.showUntrackedFiles no
 
-Configure the bare repo to add remote-tracking branches. By default,
-bare repos don't have working trees, and hence Git doesn't expect us to
-push/pull on bare repos, so Git didn't create remote-tracking branches.
+Check for correct clone
 
-    config-files-git config --add remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-
-Checkout the files from the bare repo onto the working tree.
-
-    config-files-git checkout master
+    config-files-git status
 
 Clone and update working trees of submodules. These are normally
 plugins.

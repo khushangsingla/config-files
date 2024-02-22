@@ -26,6 +26,11 @@ if [ -d "$HOME/.local/bin" ] ; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
 
-if [ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 && -z "$SSH_CONNECTION"]; then
+# set PATH so it includes user's gem bin if it exists
+if [ -d "$HOME/.local/share/gem/ruby/3.0.0" ] ; then
+	PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0"
+fi
+
+if [ -z "$DISPLAY" ] && [ $XDG_VTNR -eq 1 ] && [ -z "$SSH_CONNECTION" ]; then
 	exec startx
 fi
