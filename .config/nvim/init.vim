@@ -129,6 +129,7 @@ endif
 " Copilot
 call plug#begin()
 Plug 'github/copilot.vim', { 'do': ':UpdateRemotePlugins' }
+Plug 'jbyuki/instant.nvim'
 call plug#end()
 
 nnoremap <C-k> <C-y>
@@ -171,3 +172,19 @@ if has("cscope")
         " Open a quickfix window for the following queries.
         set cscopequickfix=s-,c-,d-,i-,t-,e-,g-
 endif
+
+
+" For ctags
+" use ctrl+p for preview mode
+nnoremap <C-p> :ptag <C-r><C-w><CR>
+inoremap <C-p> <C-o>:ptag <C-r><C-w><CR>
+nnoremap <C-q> :pclose<CR>
+" function! GetPreviewHeight()
+" 	let prev_ht_val = vim.cmd(set lines?) * 0.2
+" 	return prev_ht_val
+" endfunction
+set previewheight=10
+nnoremap <C-]> :execute 'tab tag '.expand('<cword>')<CR>
+
+" Username for plugin 'instant'
+let g:instant_username = "khushangsingla"
