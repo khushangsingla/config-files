@@ -1,5 +1,5 @@
 " Comments using C-/ or C-\
-xnoremap <C-_> ^o^I// <ESC><ESC>
-xnoremap <C-\> ^o^2ld<ESC><ESC>
-nnoremap <C-_> ^I// <ESC>
-nnoremap <C-\> ^I<DEL><DEL><DEL><ESC><ESC>
+xnoremap <buffer> <C-_> ^o^I// <ESC><ESC>
+xnoremap <buffer> <C-\> ^o^2ld<ESC><ESC>
+nnoremap <buffer> <C-_> ^I// <ESC>
+nnoremap <buffer> <C-\> ^I<DEL><DEL><DEL><ESC><ESC>
