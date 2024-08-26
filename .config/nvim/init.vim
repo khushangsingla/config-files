@@ -102,6 +102,8 @@ if exists("+showtabline")
             let bufnr = buflist[winnr - 1]
             let file = bufname(bufnr)
             let buftype = getbufvar(bufnr, 'buftype')
+			let ismod = getbufvar(bufnr, '&mod')
+			let mod = ismod ? '[+]' : ''
             if buftype == 'nofile'
                 if file =~ '\/.'
                     let file = substitute(file, '.*\/\ze.', '', '')
@@ -112,7 +114,7 @@ if exists("+showtabline")
             if file == ''
                 let file = '[No Name]'
             endif
-            let s .= ' ' . file . ' '
+            let s .= ' ' . file . mod . ' '
             let i = i + 1
         endwhile
         let s .= '%T%#TabLineFill#%='
