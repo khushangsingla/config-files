@@ -13,7 +13,7 @@ set numberwidth=4
 
 " Colours of text
 syntax on
-set termguicolors
+" set termguicolors
 
 " Indentation and tabstops
 set autoindent
@@ -132,7 +132,12 @@ endif
 call plug#begin()
 Plug 'github/copilot.vim', { 'do': ':UpdateRemotePlugins' }
 Plug 'jbyuki/instant.nvim'
+Plug 'https://github.com/ludovicchabant/vim-gutentags'
+Plug 'https://github.com/dhananjaylatkar/cscope_maps.nvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
+lua require("cscope_maps").setup()
+" lua require("init")
 
 nnoremap <C-k> <C-y>
 nnoremap <C-j> <C-e>
