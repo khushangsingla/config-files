@@ -1,8 +1,7 @@
-# source /home/khushangsingla/Downloads/Setups_Used/pwndbg/pwndbg/gdbinit.py
+source /home/khushangsingla/Downloads/Setups_Used/pwndbg/pwndbg/gdbinit.py
 set disassembly-flavor intel
 set print asm-demangle on
-source /home/khushangsingla/Downloads/Setups_Used/pwndbg/pwndbg/gdbinit.py
-source /home/khushangsingla/Downloads/Setups_Used/pwndbg/splitmind/gdbinit.py
+# source /home/khushangsingla/Downloads/Setups_Used/pwndbg/splitmind/gdbinit.py
 # Setting up pwndbg and tmux
 # python
 # import splitmind
@@ -20,6 +19,7 @@ source /home/khushangsingla/Downloads/Setups_Used/pwndbg/splitmind/gdbinit.py
 #   .below(of="backtrace", cmd="ipython", size="30%")
 # ).build(nobanner=True)
 # end
+set debuginfod enabled on
 python
 import atexit
 from pwndbg.commands.context import contextoutput, output, clear_screen
