@@ -25,3 +25,18 @@ export PWNDBG_VENV_PATH=/home/khushangsingla/.pwndbg_pyvenv
 # . "$HOME/.cargo/env"
 
 eval "$(thefuck --alias)"
+
+eval "$(direnv hook bash)"
+# default .envrc for C projects
+# export PATH=/usr/lib/ccache/bin:$PATH
+# export CCACHE_DIR=$PWD/.ccache
+# export CSCOPE_DB=$PWD/cscope.out
+# export VIRTUAL_ENV=<name>
+
+show_virtual_env() {
+  if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
+}
+export -f show_virtual_env
+PS1='$(show_virtual_env)'$PS1
