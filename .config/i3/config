@@ -154,6 +154,7 @@ assign [class="YouTube Music"] $ws10
 assign [class="Binary Ninja"] $ws9
 assign [class="VirtualBox"] $ws3
 assign [class="Qemu-system-x86_64"] $ws8
+assign [class="Qemu-system-aarch64"] $ws8
 assign [class="Atril"] $ws4
 assign [class="teams-for-linux"] $ws5
 assign [class="zoom"] $ws5
