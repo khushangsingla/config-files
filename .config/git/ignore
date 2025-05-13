@@ -1,2 +1,10 @@
 .venv
 .envrc
+
+# C/C++
+.ccache
+tags
+cscope.out
+
+# Java
+.eclipse
