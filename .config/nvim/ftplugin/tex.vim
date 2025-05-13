@@ -7,3 +7,4 @@ nnoremap <buffer> <C-\>u ^I<DEL><DEL><ESC>
 " Bold using C-B
 inoremap <buffer> <C-B> \textbf{
 vnoremap <buffer> <C-B> c\textbf{<ESC>pa}<ESC>
+setlocal colorcolumn=81
