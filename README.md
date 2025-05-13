@@ -125,3 +125,29 @@ Install pyenv
       echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
       echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
       echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+
+# Using various configurations
+
+## Java Development
+
+- For Java Project to work properly, create a `pom.xml` file in project root
+with the following example content to get started:
+
+```xml
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.solution</groupId>
+	<artifactId>solution</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>solution</name>
+	<!-- Add the current directory to the classpath as source -->
+	<build>
+		<directory>${project.basedir}/target</directory>
+		<outputDirectory>${project.build.directory}/classes</outputDirectory>
+		<sourceDirectory>${project.basedir}</sourceDirectory>
+	</build>
+</project>
+```
+
+After this, run `mvn eclipse:eclipse` to generate the `.project` and
+`.classpath` files.
