@@ -146,3 +146,15 @@ let g:instant_username = "khushangsingla"
 colorscheme vim
 
 lua require('lsp/go')
+
+
+" LSP Setup
+nnoremap <C-p> :ptag <C-r><C-w><CR>
+nnoremap <C-q> :pclose<CR>
+" set previewheight=10
+
+nnoremap <leader>q :cclose<CR>
+" open tag under cursor in a new tab
+nnoremap <leader>t :execute 'tab tag '.expand('<cword>')<CR>
+" Jump to tag under cursor
+nnoremap <leader>j :execute 'tag '.expand('<cword>')<CR>

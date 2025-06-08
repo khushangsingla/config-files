@@ -10,18 +10,10 @@ Plug 'https://github.com/dhananjaylatkar/cscope_maps.nvim'
 call plug#end()
 lua require("cscope_maps").setup()
 
-" For ctags
-" use ctrl+p for preview mode
-nnoremap <C-\>p :ptag <C-r><C-w><CR>
-inoremap <C-p> <C-o>:ptag <C-r><C-w><CR>
-nnoremap <C-q> :pclose<CR>
 " function! GetPreviewHeight()
 " 	let prev_ht_val = vim.cmd(set lines?) * 0.2
 " 	return prev_ht_val
 " endfunction
-set previewheight=10
-nnoremap <C-\>t :execute 'tab tag '.expand('<cword>')<CR>
-nnoremap <C-\>o :execute 'tag '.expand('<cword>')<CR>
 
 
 " For using cscope
