@@ -145,4 +145,4 @@ let g:instant_username = "khushangsingla"
 
 colorscheme vim
 
-lua require('config/go')
+lua require('lsp/go')
