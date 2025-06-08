@@ -59,6 +59,7 @@ map <leader>gt :tabn
 " AutoCompletion using jj and kk
 inoremap jj <C-n>
 inoremap kk <C-p>
+inoremap ll <C-x><C-o>
 
 " ESC using jk or kj
 inoremap jk <ESC>
