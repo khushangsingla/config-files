@@ -23,6 +23,10 @@ set tabstop=4
 
 filetype plugin on
 
+" set smartcase for find. Use \c, \C to specify insensitive/sensitive specifically
+set ignorecase
+set smartcase
+
 " navigate buffers without losing unsaved work
 set hidden
 " Fix cursor replacement after closing nvim
