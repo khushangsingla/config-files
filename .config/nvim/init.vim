@@ -23,10 +23,6 @@ set tabstop=4
 
 filetype plugin on
 
-" Use C-u to convert current word to upper case
-inoremap <C-u> <ESC>viwUviw<ESC>a
-nnoremap <C-u> viwU
-
 " navigate buffers without losing unsaved work
 set hidden
 " Fix cursor replacement after closing nvim
