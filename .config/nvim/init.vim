@@ -129,7 +129,7 @@ endif
 
 " Copilot
 call plug#begin()
-Plug 'github/copilot.vim', { 'do': ':UpdateRemotePlugins' } " copilot
+" Plug 'github/copilot.vim', { 'do': ':UpdateRemotePlugins' } " copilot
 Plug 'jbyuki/instant.nvim' " live editing
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fzf
 call plug#end()
