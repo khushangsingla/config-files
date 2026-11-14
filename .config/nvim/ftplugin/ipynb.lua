@@ -1,0 +1,2 @@
+-- No active ipynb-specific settings or mappings; retained as a Lua ftplugin
+-- counterpart to the former comment-only Vimscript file.
